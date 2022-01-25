@@ -7,24 +7,19 @@ public class Main {
         char alphab = 'D';
 
         switch(alphab) {
-            case A:
-                System.out.println("It's not A");
+            case 'A': case 'B': case 'C':
+                System.out.println("It's neither A, B or C");
                 break;
-            case B:
-                System.out.println("It's not B");
-                break;
-            case C:
-                System.out.println("It's not C");
-                break;
-            case D:
+            case 'D':
                 System.out.println("Yay!, It's a D");
                 break;
-            case E:
+            case 'E':
                 System.out.println("It's not an E");
                 break;
             default:
                 System.out.println("You got it wrong");
                 break;
         }
+
     }
 }
