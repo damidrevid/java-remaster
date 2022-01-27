@@ -17,7 +17,7 @@ public class Main {
                 int number = myScan.nextInt();
                 numberSum += number;
                 count++;
-            }else { 
+            }else {
                 System.out.println("Invalid number, Try again");
             }
             myScan.nextLine();
