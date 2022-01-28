@@ -43,6 +43,7 @@ public class Main {
         }
         myScanner.close();
         System.out.println("The Min value entered is : " + min + " and the Max is : " + max);
+        System.out.println(count + " inputs received.");
         System.out.println("Average is "+average);
     }
 }
