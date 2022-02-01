@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Opening balance is " + bank.getAccountBalance());
         bank.deposit(5000);
         System.out.println("Your current balance is " + bank.getAccountBalance());
-        bank.withdraw(5000.01);
+        bank.withdraw(4999.01);
         System.out.println("Your current balance is " + bank.getAccountBalance());
 
     }

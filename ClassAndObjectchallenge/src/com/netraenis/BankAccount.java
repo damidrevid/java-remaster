@@ -7,6 +7,18 @@ public class BankAccount {
     private String email = null;
     private int phoneNumber = 0;
 
+    // Constructor
+    public BankAccount() {
+        System.out.println("Hi, I'm the default Constructor");
+    }
+
+    public BankAccount(int accountNumber, double accountBalance, String customerName, String email, int phoneNumber) {
+        this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
+        this. customerName = customerName; this.email=email;
+        this.phoneNumber = phoneNumber;
+    }
+
     //Setters and Getters for the Class fields.
     public int getAccountNumber() {
         return accountNumber;
