@@ -1,26 +1,52 @@
 package com.netraenis;
 
  public class Car extends Vehicle {
-     private int tyres;
+     private int wheels;
+     private int doors;
+     private int gears;
+     private boolean isAutomatic;
 
-     public Car() {
-         super();
-         this.tyres = 4;
+     private int currentGear;
+
+     public Car(String name, String size, int wheels, int doors, int gears, boolean isAutomatic, int currentGear) {
+         super(name, size);
+         this.wheels = wheels;
+         this.doors = doors;
+         this.gears = gears;
+         this.isAutomatic = isAutomatic;
+         this.currentGear = 1;
      }
 
-     public int getTyres() {
-         return tyres;
+     public int getWheels() {
+         return wheels;
      }
 
-     @Override
-     public boolean gearChanged(int gear) {
-         System.out.println("This is a car");
-         return super.gearChanged(gear);
+     public int getDoors() {
+         return doors;
      }
 
-     @Override
-     public void move(int direction) {
-         System.out.println("Car on the moove!");
-         super.move(direction);
+     public int getGears() {
+         return gears;
      }
+
+     public boolean isAutomatic() {
+         return isAutomatic;
+     }
+
+     public int getCurrentGear() {
+         return currentGear;
+     }
+
+// The Methods
+     public void changeGear(int currentGear) {
+         this.currentGear = currentGear;
+         System.out.println("Gear changed to " + this.currentGear);
+     }
+
+     public void carMove(int velocity, int direction) {
+         move(velocity, direction);
+         System.out.println("You car is moving faster with Velocity of " + velocity + " " +
+                 "in " + direction + " degrees in direction");
+     }
+
  }
