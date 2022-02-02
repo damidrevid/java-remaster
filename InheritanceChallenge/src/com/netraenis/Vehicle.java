@@ -1,47 +1,54 @@
 package com.netraenis;
 
 public class Vehicle {
-    private int wheel;
-    private int brake;
-    private int colour;
+    private String name;
+    private String size;
+    private int velocity;
+    private int theDirection;
+    private int speed;
 
-    public Vehicle() {
-        this(4,1,4);
+    public Vehicle(String name, String size) {
+        this.name = name;
+        this.size = size;
+        this.velocity = 0;
+        this.theDirection = 0;
+        this.speed = 0;
     }
 
-    public Vehicle(int wheel, int brake, int colour) {
-        this.wheel = wheel;
-        this.brake = brake;
-        this.colour = colour;
+    public String getName() {
+        return name;
     }
 
-    public int getWheel() {
-        return wheel;
+    public String getSize() {
+        return size;
     }
 
-    public int getBrake() {
-        return brake;
+    public int getVelocity() {
+        return velocity;
     }
 
-    public int getColour() {
-        return colour;
+    public int getTheDirection() {
+        return theDirection;
     }
 
-    public boolean gearChanged(int gear) {
-        if (gear < 1) {
-            System.out.println("Damaged Gear");
-            return false;
-        }
-        else {
-            System.out.println("Gear changed");
-            return true;
-        }
+    public int getSpeed() {
+        return speed;
     }
 
-    public void move(int direction) {
-        System.out.println("You are now moving at " + gearChanged(direction) + "KmPH");
+    // The methods
+    public void steer (int direction) {
+        this.theDirection += direction;
+        System.out.println("Your Vehicle is heading the " + theDirection + " degrees.");
     }
 
+    public void move(int velocity, int direction) {
+        this.theDirection = direction;
+        this.velocity += velocity;
+//        this.speed = theDirection * this.velocity;
+        System.out.println("This Vehicle is moving at " + velocity + " and in " + theDirection + " degrees direction" );
+    }
 
-
+    public void stopVehicle() {
+        this.velocity = 0;
+    }
 }
