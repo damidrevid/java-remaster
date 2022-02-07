@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Printer thePrinter = new Printer(98, true);
 
-        thePrinter.printPage(5000);
+        thePrinter.printPage(50000);
 
 //        System.out.println("Number of pages printed " + thePrinter.getPagesPrinted());
 //        System.out.println("Toner level " + thePrinter.getTonerLevel());

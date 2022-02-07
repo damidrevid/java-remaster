@@ -56,7 +56,7 @@ public class Printer {
             printMode = (printMode / 2) + (printMode % 2);
             System.out.println("To printing in Duplex mode #" + printMode + " sheets will be used.");
         }
-        } else System.out.println("Nothing to print.");
+        } else System.out.println("Nothing to print");
 
 
     }
