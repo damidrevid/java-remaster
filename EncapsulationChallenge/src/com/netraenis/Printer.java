@@ -25,7 +25,7 @@ public class Printer {
 
     public void setTonerLevel(int tonerLevel) {
         this.tonerLevel += tonerLevel;
-        if (tonerLevel < 0 && tonerLevel > 100) {
+        if ((tonerLevel < 0) || (tonerLevel > 100)) {
             System.out.println("Toner not filled");
         } else {
 
