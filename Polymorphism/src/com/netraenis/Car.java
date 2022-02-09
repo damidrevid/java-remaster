@@ -50,8 +50,8 @@ public class Car {
     }
 
 // Sub-Classes
-    public class Honda extends Car{
-        public Honda(int cylinders, String name) {
+    class Honda extends Car{
+        public Honda() {
             super(2, "Accord");
         }
 
@@ -71,8 +71,8 @@ public class Car {
         }
     }
 
-    public class Toyota extends Car {
-        public Toyota(int cylinders, String name) {
+    class Toyota extends Car {
+        public Toyota() {
             super(1, "Lexus");
         }
 
@@ -87,8 +87,8 @@ public class Car {
         }
     }
 
-    public class Mercedes extends Car {
-        public Mercedes(int cylinders, String name) {
+    static class Mercedes extends Car {
+        public Mercedes() {
             super(16, "GLS AMG");
         }
 
@@ -104,6 +104,32 @@ public class Car {
             System.out.println("Later, we move!");
         }
 
+    }
+
+    //Driver
+    public class Main {
+
+        public void main(String[] args) {
+            for (int i = 1; i <11; i++) {
+                Car car = randomCars();
+            }
+        }
+
+        public Car randomCars() {
+            int randomNumber = (int) (Math.random() * 3) + 1;
+            System.out.println(randomNumber);
+
+            switch (randomNumber) {
+                case 1:
+                    return new Honda();
+                case 2:
+                    return new Toyota();
+                case 3:
+                    return new Mercedes();
+                default:
+                    return null;
+            }
+        }
     }
 
 
