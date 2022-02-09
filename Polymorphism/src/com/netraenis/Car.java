@@ -49,6 +49,62 @@ public class Car {
         System.out.println("Car brought to a stop. Thank God for brakes!");
     }
 
+// Sub-Classes
+    public class Honda extends Car{
+        public Honda(int cylinders, String name) {
+            super(2, "Accord");
+        }
+
+        @Override
+        public void startEngine() {
+            System.out.println("Your Accord Engine is now powered and ready to be fired!");
+        }
+
+        @Override
+        public void accelerate() {
+            System.out.println("Warning from Honda; Speed kills!");
+        }
+
+        @Override
+        public void brake() {
+            super.brake();
+        }
+    }
+
+    public class Toyota extends Car {
+        public Toyota(int cylinders, String name) {
+            super(1, "Lexus");
+        }
+
+        @Override
+        public void accelerate() {
+            System.out.println("Smooth!");
+        }
+
+        @Override
+        public void brake() {
+            System.out.println("Oh no, don't stop please!");
+        }
+    }
+
+    public class Mercedes extends Car {
+        public Mercedes(int cylinders, String name) {
+            super(16, "GLS AMG");
+        }
+
+        public void startEngine(){
+            System.out.println("Ready to fly?");
+        }
+
+        public void accelerate() {
+            System.out.println("Zooom gently");
+        }
+
+        public void brake() {
+            System.out.println("Later, we move!");
+        }
+
+    }
 
 
 }
