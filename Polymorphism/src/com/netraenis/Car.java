@@ -1,10 +1,10 @@
 package com.netraenis;
 
 public class Car {
-    private boolean hasEngine = true;
+    private boolean hasEngine;
     private int cylinders;
-    private int wheels = 4;
-    private int gear = 6;
+    private int wheels;
+    private int gear;
     private String name;
 
     //Constructor
@@ -13,23 +13,14 @@ public class Car {
     public Car(int cylinders, String name) {
         this.cylinders = cylinders;
         this.name = name;
+        this.hasEngine = true;
+        this.wheels=4;
+        this.gear=6;
     }
 
     // Getters
-    public boolean isHasEngine() {
-        return hasEngine;
-    }
-
     public int getCylinders() {
         return cylinders;
-    }
-
-    public int getWheels() {
-        return wheels;
-    }
-
-    public int getGear() {
-        return gear;
     }
 
     public String getName() {
@@ -37,16 +28,16 @@ public class Car {
     }
 
     // Methods
-    public void startEngine() {
-        System.out.println("Engine is now started, drive safely.");
+    public String startEngine() {
+        return "Engine is now started, drive safely.";
     }
 
-    public void accelerate() {
-        System.out.println("Car in Accelerations. Warning: Speed kills");
+    public String accelerate() {
+        return "Car in Accelerations. Warning: Speed kills";
     }
 
-    public void brake() {
-        System.out.println("Car brought to a stop. Thank God for brakes!");
+    public String brake() {
+        return "Car brought to a stop. Thank God for brakes!";
     }
 
 // Sub-Classes
@@ -56,18 +47,18 @@ public class Car {
         }
 
         @Override
-        public void startEngine() {
-            System.out.println("Your Accord Engine is now powered and ready to be fired!");
+        public String startEngine() {
+            return "Your Accord Engine is now powered and ready to be fired!";
         }
 
         @Override
-        public void accelerate() {
-            System.out.println("Warning from Honda; Speed kills!");
+        public String accelerate() {
+            return "Warning from Honda; Speed kills!";
         }
 
         @Override
-        public void brake() {
-            super.brake();
+        public String brake() {
+            return super.brake();
         }
     }
 
@@ -77,13 +68,13 @@ public class Car {
         }
 
         @Override
-        public void accelerate() {
-            System.out.println("Smooth!");
+        public String accelerate() {
+            return "Smooth!";
         }
 
         @Override
-        public void brake() {
-            System.out.println("Oh no, don't stop please!");
+        public String brake() {
+            return "Oh no, don't stop please!";
         }
     }
 
@@ -92,16 +83,16 @@ public class Car {
             super(16, "GLS AMG");
         }
 
-        public void startEngine(){
-            System.out.println("Ready to fly?");
+        public String startEngine(){
+            return "Ready to fly?";
         }
 
-        public void accelerate() {
-            System.out.println("Zooom gently");
+        public String accelerate() {
+            return "Zooom gently";
         }
 
-        public void brake() {
-            System.out.println("Later, we move!");
+        public String brake() {
+            return "Later, we move!";
         }
 
     }
@@ -110,7 +101,7 @@ public class Car {
     public class Main {
 
         public void main(String[] args) {
-            for (int i = 1; i <11; i++) {
+            for (int i = 1; i <10; i++) {
                 Car car = randomCars();
             }
         }
