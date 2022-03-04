@@ -41,7 +41,7 @@ class Car {
     }
 
 // Sub-Classes
-    class Honda extends Car{
+    static class Honda extends Car{
         public Honda() {
             super(2, "Accord");
         }
@@ -62,7 +62,7 @@ class Car {
         }
     }
 
-    class Toyota extends Car {
+    static class Toyota extends Car {
         public Toyota() {
             super(1, "Lexus");
         }
@@ -83,13 +83,13 @@ class Car {
             super(16, "GLS AMG");
         }
 
-        public String startEngine(){
-            return "Ready to fly?";
-        }
+//        public String startEngine(){
+//            return "Ready to fly?";
+//        }
 
-        public String accelerate() {
-            return "Zooom gently";
-        }
+//        public String accelerate() {
+//            return "Zooom gently";
+//        }
 
         public String brake() {
             return "Later, we move!";
@@ -98,32 +98,32 @@ class Car {
     }
 
     //Driver
-    public class Main {
-
-        public void main(String[] args) {
-            for (int i = 1; i <10; i++) {
-                Car car = randomCar();
-                System.out.println("Movie #" + i + " : " + getName() + "\n" +
-                       "Accelerate: " + car.accelerate() + "\n" + car.startEngine() );
-            }
-        }
-
-        public Car randomCar() {
-            int randomNumber = (int) (Math.random() * 3) + 1;
-            System.out.println("The Random number generated was " + randomNumber);
-
-            switch (randomNumber) {
-                case 1:
-                    return new Honda();
-                case 2:
-                    return new Toyota();
-                case 3:
-                    return new Mercedes();
-                default:
-                    return null;
-            }
-        }
-    }
+//    public class Main {
+//
+//        public void main(String[] args) {
+//            for (int i = 1; i <10; i++) {
+//                Car car = randomCar();
+//                System.out.println("Movie #" + i + " : " + getName() + "\n" +
+//                       "Accelerate: " + car.accelerate() + "\n" + car.startEngine() );
+//            }
+//        }
+//
+//        public Car randomCar() {
+//            int randomNumber = (int) (Math.random() * 3) + 1;
+//            System.out.println("The Random number generated was " + randomNumber);
+//
+//            switch (randomNumber) {
+//                case 1:
+//                    return new Honda();
+//                case 2:
+//                    return new Toyota();
+//                case 3:
+//                    return new Mercedes();
+//                default:
+//                    return null;
+//            }
+//        }
+//    }
 
 
 }
