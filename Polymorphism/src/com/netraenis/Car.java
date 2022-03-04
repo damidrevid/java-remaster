@@ -1,6 +1,6 @@
 package com.netraenis;
 
-public class Car {
+class Car {
     private boolean hasEngine;
     private int cylinders;
     private int wheels;
@@ -102,13 +102,15 @@ public class Car {
 
         public void main(String[] args) {
             for (int i = 1; i <10; i++) {
-                Car car = randomCars();
+                Car car = randomCar();
+                System.out.println("Movie #" + i + " : " + getName() + "\n" +
+                       "Accelerate: " + car.accelerate() + "\n" + car.startEngine() );
             }
         }
 
-        public Car randomCars() {
+        public Car randomCar() {
             int randomNumber = (int) (Math.random() * 3) + 1;
-            System.out.println(randomNumber);
+            System.out.println("The Random number generated was " + randomNumber);
 
             switch (randomNumber) {
                 case 1:
