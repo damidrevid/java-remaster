@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] myIntegers = getinputs(5);
+        int[] myIntegers = getinputs(10);
 
         int[] sorted = sortArrayAsc(myIntegers);
 
