@@ -66,29 +66,29 @@ public class Main {
 
 
     //Sort Array in Descending Order
-    public static int[] sortArrayDesc(int[] theArray) {
-        int[] sortedArray = new int[theArray.length];
-        //Copy the unsorted array into the new sorted array
-        for (int i = 0; i < sortedArray.length; i++) {
-            sortedArray[i] = theArray[i];
-        }
-
-        //Sort
-        boolean condition = true;
-        int placeHolder;
-
-        while(condition) {
-            condition = false;
-            for (int a=0; a < sortedArray.length - 1; a++){
-                if(sortedArray[a] < sortedArray[a+1]) {
-                    placeHolder = sortedArray[a];
-                    sortedArray[a] = sortedArray[a+1];
-                    sortedArray[a+1] = placeHolder;
-                    condition = true;
-                }
-            }
-        }
-        return sortedArray;
+//    public static int[] sortArrayDesc(int[] theArray) {
+//        int[] sortedArray = new int[theArray.length];
+//        //Copy the unsorted array into the new sorted array
+//        for (int i = 0; i < sortedArray.length; i++) {
+//            sortedArray[i] = theArray[i];
+//        }
+//
+//        //Sort
+//        boolean condition = true;
+//        int placeHolder;
+//
+//        while(condition) {
+//            condition = false;
+//            for (int a=0; a < sortedArray.length - 1; a++){
+//                if(sortedArray[a] < sortedArray[a+1]) {
+//                    placeHolder = sortedArray[a];
+//                    sortedArray[a] = sortedArray[a+1];
+//                    sortedArray[a+1] = placeHolder;
+//                    condition = true;
+//                }
+//            }
+//        }
+//        return sortedArray;
     }
 
 
