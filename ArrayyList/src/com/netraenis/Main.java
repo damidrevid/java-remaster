@@ -60,28 +60,27 @@ public class Main {
     }
 
     public static void modifyGroceryItem() {
-        System.out.println("Enter item number: ");
-        int itemNumber = scan.nextInt();
+        System.out.println("Enter the current item name: ");
+        String current = scan.nextLine();
         scan.nextLine();
 
         System.out.println("Enter the new item name:");
         String newItem = scan.nextLine();
 
-        groceryList.modifyGrocery(itemNumber -1, newItem); /* I subtracted one (1) from itemNumber because
-        starts its count from zero (0)*/
+        groceryList.modifyGrocery(current, newItem);
     }
 
     public static void removeGroceryItem() {
-        System.out.println("Enter Item number on the list");
-        int itemNumber = scan.nextInt();
+        System.out.println("Enter Item name");
+        String itemName = scan.nextLine();
         scan.nextLine();
-        groceryList.removeItem(itemNumber - 1);
+        groceryList.removeItem(itemName);
     }
 
     public static void searchItem() {
         System.out.println("What item are you looking for on the list?");
         String searchedItem = scan.nextLine();
-        if(groceryList.findItem(searchedItem) != null ) {
+        if(groceryList.onFile(searchedItem) ) {
             System.out.println("Searched Item Found!");
         }else {
             System.out.println("Gobe! Item nor dey list");
