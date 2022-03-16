@@ -12,17 +12,16 @@ public class Contact {
         } contactArray.add(name);
     }
 
-    public void editUser(int position, String newName) {
-
+    public void editUser(String currentName, String newName) {
+        int position = findUserIndex(currentName);
         contactArray.set(position, newName);
     }
 
-    public int void findUser(String name) {
-        if (!userExists(name)) {
-            System.out.println("User does not exist");
-        } else {
-            return int unserIndex = contactArray.indexOf(name);
+    public int findUserIndex(String name) {
+        if (userExists(name)) {
+            return contactArray.indexOf(name);
         }
+        return -1;
     }
 
     public boolean userExists(String name){
