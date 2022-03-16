@@ -71,7 +71,7 @@ public class Main {
         String currentContact = scan.nextLine();
         Contact existingContact = myPhone.searchUser(currentContact);
         if (existingContact == null) {
-            System.out.println("No user with the name" + currentContact + " found");
+            System.out.println("No user with the name " + currentContact + " found");
         } else
         {
             System.out.println("Enter the new name");
@@ -89,7 +89,7 @@ public class Main {
         String currentContact = scan.nextLine();
         Contact existingContact = myPhone.searchUser(currentContact);
         if (existingContact == null) {
-            System.out.println("No user with the name" + currentContact + " found");
+            System.out.println("No user with the name " + currentContact + " found");
         } myPhone.removeUser(existingContact);
     }
 
