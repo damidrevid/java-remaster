@@ -25,7 +25,7 @@ public class MobilePhone {
         }
 
     }
-
+//
     public void editUser(Contact currentName, Contact newName) {
         int position = findUserIndex(currentName);
         if(position >= 0) {
