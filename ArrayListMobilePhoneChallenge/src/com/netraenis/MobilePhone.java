@@ -19,9 +19,13 @@ public class MobilePhone {
     public void saveContact(Contact name) {
         if (userExists(name)){
             System.out.println("User name: " + name + " already exists");
-        } else System.out.println(contactArray.add(name) + "User " + name + " has been added");
-    }
+        } else {
+            contactArray.add(name);
+            System.out.println("User " + name + " has been added");
+        }
 
+    }
+//
     public void editUser(Contact currentName, Contact newName) {
         int position = findUserIndex(currentName);
         if(position >= 0) {
