@@ -58,7 +58,7 @@ public class Main {
         String phoneNumber = scan.nextLine();
         Contact newContact = Contact.createContact(userName, phoneNumber);
         if (myPhone.addNewContact(newContact)) {
-            System.out.println("New contact added: name " + userName + " Phone number " + phoneNumber);
+            System.out.println("New contact added: name " + userName.toUpperCase() + " Phone number " + phoneNumber);
         }
         else {
             System.out.println("Contact cannot be saved " + userName + " already exist");
@@ -102,7 +102,6 @@ public class Main {
         } else {
             System.out.println("Error deleting contact");
         }
-
     }
 
     public static void searchContact(){
@@ -128,12 +127,5 @@ public class Main {
                 "\n6 - to print a list of available options");
         System.out.println("Choose your action: ");
     }
-
-
-
-
-
-
-
 
 }
