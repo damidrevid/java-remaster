@@ -60,8 +60,6 @@ public class Main {
         String userName = scan.nextLine();
         System.out.println("Enter phone number");
         String phoneNumber = scan.nextLine();
-
-
         Contact newContact = Contact.createContact(userName, phoneNumber);
         myPhone.saveContact(newContact);
     }
