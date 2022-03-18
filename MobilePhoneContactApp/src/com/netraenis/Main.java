@@ -102,7 +102,6 @@ public class Main {
         } else {
             System.out.println("Error deleting contact");
         }
-
     }
 
     public static void searchContact(){
@@ -128,12 +127,5 @@ public class Main {
                 "\n6 - to print a list of available options");
         System.out.println("Choose your action: ");
     }
-
-
-
-
-
-
-
 
 }
