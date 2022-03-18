@@ -58,7 +58,7 @@ public class Main {
         String phoneNumber = scan.nextLine();
         Contact newContact = Contact.createContact(userName, phoneNumber);
         if (myPhone.addNewContact(newContact)) {
-            System.out.println("New contact added: name " + userName + " Phone number " + phoneNumber);
+            System.out.println("New contact added: name " + userName.toUpperCase() + " Phone number " + phoneNumber);
         }
         else {
             System.out.println("Contact cannot be saved " + userName + " already exist");
