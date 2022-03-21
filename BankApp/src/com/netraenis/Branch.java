@@ -15,6 +15,10 @@ public class Branch {
         return branchName;
     }
 
+    public ArrayList<Customer> getBankCustomer() {
+        return bankCustomer;
+    }
+
     public boolean addCustomer(String name, double initialAmount) {
         // Check if customer already exist
         if(findCustomer(name) == null) {

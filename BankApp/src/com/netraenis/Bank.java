@@ -2,16 +2,16 @@ package com.netraenis;
 import java.util.ArrayList;
 
 public class Bank {
-    private String branch;
+    private String bankName;
     private ArrayList<Branch> bankBranch;
 
-    public Bank(String branch) {
-        this.branch = branch;
+    public Bank(String bankName) {
+        this.bankName = bankName;
         this.bankBranch = new ArrayList<Branch>();
     }
 
-    public String getBranch() {
-        return branch;
+    public String getBankName() {
+        return bankName;
     }
 
     public boolean addBranch(String name) {
@@ -29,6 +29,7 @@ public class Bank {
             theBranch.addCustomer(name, initialAmount);
             return true;
         }
+        System.out.println("You need to first Open a branch at " + branch);
         return false;
     }
 
@@ -43,8 +44,23 @@ public class Bank {
 
     public boolean listCustomers(String theBranch, boolean showTransaction) {
             Branch myBranch = findBranch(theBranch);
-            if(myBranch == null) {
+            if(myBranch != null) {
+                System.out.println("Here's the customer list for Bank Branch in, " + myBranch.getBranchName() + ":");
 
+                ArrayList<Customer> branchCustomers = myBranch.getBankCustomer();
+                for(int i=0; i < branchCustomers.size(); i++) {
+                    Customer branchCustomer = branchCustomers.get(i);
+                    System.out.println("[" + (i + 1) + "] " + branchCustomer.getName());
+                    if(showTransaction){
+                        System.out.println("Transaction ");
+                        ArrayList<Double> transactions = branchCustomer.getTransaction();
+                        for (int j=0; j<transactions.size(); j++) {
+                            System.out.println("["+ (j+1) + "] Amount " + transactions.get(j));
+                        }
+                    }
+                } return true;
+            }else {
+                return false;
             }
     }
 
