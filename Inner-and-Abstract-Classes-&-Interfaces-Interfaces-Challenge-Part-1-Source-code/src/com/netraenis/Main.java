@@ -25,7 +25,7 @@ public class Main {
         // simulate getting values from a file – this allows you to type as many values as your class
         // requires, and returns an ArrayList.
 
-        Player tim = new Player("Tim", 10, 15);
+        Player tim = new Player("Dams", 10, 15);
         System.out.println(tim.toString());
         saveObject(tim);
 
