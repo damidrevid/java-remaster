@@ -1,8 +1,5 @@
 package com.netraenis;
 
-/**
- * Created by dev on 7/10/2015.
- */
 public abstract class Animal {
     private String name;
 

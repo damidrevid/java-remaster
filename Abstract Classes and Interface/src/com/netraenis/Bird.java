@@ -1,8 +1,5 @@
 package com.netraenis;
 
-/**
- * Created by dev on 7/10/2015.
- */
 public abstract class Bird extends Animal implements CanFly
 {
     public Bird(String name) {
