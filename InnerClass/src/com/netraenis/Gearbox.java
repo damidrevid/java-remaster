@@ -2,9 +2,7 @@ package com.netraenis.;
 
 import java.util.ArrayList;
 
-/**
- * Created by dev on 2/10/2015.
- */
+
 public class Gearbox {
     private ArrayList<Gear> gears;
     private int maxGears;

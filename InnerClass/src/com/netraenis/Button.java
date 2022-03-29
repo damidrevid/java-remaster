@@ -1,8 +1,6 @@
 package com.netraenis.;
 
-/**
- * Created by dev on 4/10/2015.
- */
+
 public class Button {
     private String title;
     private OnClickListener onClickLister;
