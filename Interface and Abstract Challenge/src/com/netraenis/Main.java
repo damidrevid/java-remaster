@@ -7,16 +7,20 @@ public class Main {
 
     public static void main(String[] args) {
     
-        Player tim = new Player("Damz", 10, 15);
-        System.out.println(tim.toString());
-        saveObject(tim);
+        Player damilare = new Player("Damz", 10, 15);
+        System.out.println(damilare.toString());
+        saveObject(damilare);
 
-        tim.setHitPoints(8);
-        System.out.println(tim);
-        tim.setWeapon("Stormbringer");
-        saveObject(tim);
-        loadObject(tim);
-        System.out.println(tim);
+        ISaveable monster = new Monster("Tiger", 89, 90);
+        System.out.println(((Monster)monster).getName());
+        saveObject(monster);
+
+        damilare.setHitPoints(8);
+        System.out.println(damilare);
+        damilare.setWeapon("Stormbringer");
+        saveObject(damilare);
+        loadObject(damilare);
+        System.out.println(damilare);
 
     }
 
@@ -59,10 +63,6 @@ public class Main {
         ArrayList<String> values = readValues();
         objectToLoad.read(values);
     }
-
-
-
-
 
 
 }
