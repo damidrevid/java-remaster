@@ -4,4 +4,5 @@ public interface User {
     void deleteUser();
     void saveUser();
     void searchUser();
+
 }
