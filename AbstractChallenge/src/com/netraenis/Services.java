@@ -13,7 +13,7 @@ public class Services implements User {
     public Services(String name, boolean provider) {
         this.name = name;
         this.provider = provider;
-        this.customers = new ArrayList<Customer>;
+        this.customers = new ArrayList<Customer>();
     }
 
     @Override
