@@ -1,6 +1,5 @@
 package com.netraenis;
 
-import java.beans.Customizer;
 import java.util.ArrayList;
 import java.util.List;
 
