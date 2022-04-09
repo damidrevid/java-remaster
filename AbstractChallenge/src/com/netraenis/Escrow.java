@@ -14,7 +14,7 @@ public class Escrow implements User {
 
     @Override
     public void deleteUser() {
-
+        System.out.println("Chai!");
     }
 
     @Override
