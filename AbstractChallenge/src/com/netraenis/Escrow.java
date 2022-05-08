@@ -9,12 +9,14 @@ public class Escrow implements User {
 
     public Escrow(double amount){
         this.amount = amount;
+
         this.customers = new ArrayList<>();
     }
 
     @Override
     public void deleteUser() {
         System.out.println("Chai!");
+
     }
 
     @Override
